@@ -15,3 +15,40 @@
 
 // Input: head = [1,2], n = 1
 // Output: [1]
+
+
+//can we do this in one pass 
+
+//dummy node starts before the head node 
+//current=/head 
+//tail node we moved two down  
+//were moving three points, there are five numbers we moved the tail twice to the right, and will go until the tail is null and remove node lands on 3
+//whihc is the 2nd from the right, 
+
+
+var removeNthFromEnd = function(head, n) {
+    
+ let dummyHead= new ListNode(-1) //setting dummmyNode
+ dummyHead.next=head;           // setting reference dummyHead to head which is true after dummyhead, head is next 
+ let resultHead=dummyHead 
+ let count =0; 
+ let tail = head; 
+
+ while(count< n){
+    count++
+    tail = tail.next
+ }
+
+ let removedNode=head; 
+ let prev = dummyHead; 
+
+ while(tail){
+    tail=tail.next
+    removedNode=removedNode.next; 
+    prev=prev.next
+ }
+  prev.next= removedNode.next 
+
+  return resultHead.next; 
+
+};
