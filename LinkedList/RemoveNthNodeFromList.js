@@ -25,6 +25,8 @@
 //were moving three points, there are five numbers we moved the tail twice to the right, and will go until the tail is null and remove node lands on 3
 //whihc is the 2nd from the right, 
 
+//why do we need to keep track of 3 trackers? The tail is to set n=tail, and as it moves down \
+//adding or deleting linked lists we can use this dummy method 
 
 var removeNthFromEnd = function(head, n) {
     
@@ -36,7 +38,7 @@ var removeNthFromEnd = function(head, n) {
 
  while(count< n){
     count++
-    tail = tail.next
+    tail = tail.next    //setting tail equal to n  
  }
 
  let removedNode=head; 
