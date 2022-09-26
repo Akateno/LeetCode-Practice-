@@ -15,7 +15,8 @@
 var moveZeroes = function(nums) {
     let index=0; 
     
-    for (let i=0; i<nums.length; i++){  //we are basically setting the index for all nonzero numbers starting at index=0
+    for (let i=0; i<nums.length; i++){
+          //we are basically setting the index for all nonzero numbers starting at index=0
         if(nums[i] !== 0){
             nums[index]=nums[i]
             index++
