@@ -1,0 +1,14 @@
+let nums = [2,7,11,15], target = 9
+
+
+
+
+function practice(){
+   
+    
+
+}
+
+
+
+practice(haystack,needle); 
